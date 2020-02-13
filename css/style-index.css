@@ -1,0 +1,213 @@
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+
+body {
+    display: grid;
+    background-color: hsl(0, 0%, 85%);
+    margin: 0;
+    /* font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif; */
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/*--------------------------------------------------------------
+Nav Bar
+--------------------------------------------------------------*/
+nav {
+    background-color: white;
+    margin-bottom: -7px;
+}
+.bar ul {
+    list-style-type: none;
+    margin: 0px;
+    /* margin-bottom: -17px; */
+    padding: 0px;
+}
+.bar li h2 {
+	margin: 14px 0 0 0;
+	
+}
+
+.bar li  {
+    float: left;
+}
+
+.bar li img {
+  height: 60px;
+  display: block;
+  border: 0;
+  width: auto;
+  /* height: 60px; */
+}
+
+/*--------------------------------------------------------------
+Tab Styles
+--------------------------------------------------------------*/
+
+aside.languages {
+	font: .8em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-color: rgb(26, 99, 141); /* For browsers that do not support gradients */
+	background-image: linear-gradient(to bottom right, rgb(162, 200, 218), rgb(28, 81, 116)); /* Standard syntax (must be last) */
+	padding: 25px;
+	width: auto;
+    border-radius: 5px;
+    margin-bottom: -15px;
+}
+
+#tabContainers {
+	border-radius: 4px;	
+}
+.languages h3 {
+	font-weight: normal;
+	color: white;
+	font-size: 2em;
+	margin-bottom:.5em;
+	text-align: center;;
+}
+
+#tabContainer h4 {
+	color: rgb(83, 104, 138);
+	font-size: 2em;
+}
+
+#tabs{
+	height:30px;
+	overflow:hidden;
+}
+
+#tabs > ul{
+	font: 1em;
+	list-style:none;
+}
+#tabs ul, #tabs li {
+	margin:0;
+	padding:0;
+}
+
+#tabs > ul > li{
+	margin:0 2px 0 0;
+	padding:7px 10px;
+	display:block;
+	float:left;
+	color:#FFF;
+	border-top-left-radius:4px;
+	border-top-right-radius: 4px;
+	background: #CCC;
+}
+
+#tabs > ul > li:hover{
+	background: white; 
+	cursor:pointer;
+}
+
+#tabs > ul > .active{
+	background: white; /* old browsers */
+	cursor:pointer;
+}
+
+#containers div {
+	background: white;
+	padding:10px 10px 25px;
+	margin:0;
+	color:#333;
+}
+#tabs a {
+	text-decoration: none;
+	color: black;
+}
+
+.containers {
+   border-radius: 4px;
+   padding: 1em; 
+}
+
+#loan, #manual {
+    border-radius: 4px;
+}
+
+/*--------------------------------------------------------------
+Cards:
+--------------------------------------------------------------*/
+.buttons {
+    display: grid;
+    background-color: hsl(0, 0%, 85%);
+	
+}
+.buttons h1 {
+	text-align: center;
+	text-decoration: underline;
+    font-size: 35px;
+    /* font-family: 'Righteous', cursive; */
+    font-family: 'Raleway', sans-serif;
+}
+.cards {
+	list-style-type: none;
+}
+
+ul.cards {
+	padding: 0px 40px 0px 40px !important;
+    margin: 0px;
+}
+
+.card {
+	margin: 1em;
+}
+
+.card a {
+	display: block;
+	padding: 0 15px;
+	color: hsl(0, 0%, 5%);
+	text-align: center;
+	text-decoration: none;
+	background: white;
+	border: 1px transparent;
+	transition: all .2s;
+	border-radius: 4px;
+}
+
+.card a:focus,
+.card a:hover {
+	margin: -5px 5px 5px -5px;
+	box-shadow: 5px 5px 0px 0px hsla(0, 0%, 70%, .8);
+}
+
+
+.cards h2 {
+	font-size: 1.5em;
+	margin: 5px;
+}
+
+.button-containers {
+	display: grid;
+    grid-template-columns: 6px 1fr 1fr 10px;
+}

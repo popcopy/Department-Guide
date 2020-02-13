@@ -1,0 +1,249 @@
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+body {
+	margin: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    /* font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif; */
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+/*--------------------------------------------------------------
+Grid:
+--------------------------------------------------------------*/
+.site {
+	display: grid;
+	grid-template-columns: .5fr 1fr 1fr .5fr;
+	grid-template-rows: auto 1fr 1fr;
+}
+
+.main-content {
+	grid-column: 2/4;
+	grid-row: 2/3;
+}
+
+.bar{
+	grid-column: 1/5;
+	grid-row: 1/2;
+}
+
+.sidebar {
+	grid-column: 1/2;
+	grid-row: 2/4;
+}
+
+.sidebar-duex {
+	grid-column: 4/5;
+	grid-row: 2/4;
+}
+
+.main-area {
+	grid-column: 2/4;
+	grid-row: 3/4;
+}
+
+.footer-content {
+	grid-column: 1/5;
+	grid-row: 4;
+}
+
+
+
+/*--------------------------------------------------------------
+Header
+--------------------------------------------------------------*/
+nav {
+    background-color: white;
+    margin-bottom: -7px;
+}
+.bar ul {
+    list-style-type: none;
+    margin: 0px;
+    /* margin-bottom: -17px; */
+    padding: 0px;
+}
+.bar li h2 {
+	margin: 14px 0 0 0;
+	
+}
+
+.bar li  {
+    float: left;
+}
+
+.bar li img {
+  height: 60px;
+  display: block;
+  border: 0;
+  width: auto;
+  /* height: 60px; */
+}
+
+
+/*--------------------------------------------------------------
+main content
+--------------------------------------------------------------*/
+.main-content {
+	padding: .5em;
+	background-color: hsl(0, 0%, 90%);
+}
+.splash {
+	background-color: rgb(26, 99, 141); /* For browsers that do not support gradients */
+	background-image: linear-gradient(to bottom right, rgb(162, 200, 218), rgb(28, 81, 116)); /* Standard syntax (must be last) */ 
+	padding-bottom: .2em;
+    color: white;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.splash-content {
+	padding: 1.5em;
+}
+
+.content-title {
+	text-align: center;
+	font-size: 35px;
+}
+
+
+/*--------------------------------------------------------------
+Side bar:
+--------------------------------------------------------------*/
+.sidebar-duex {
+	padding: .5em;
+	background-color: hsl(0, 0%, 90%);
+}
+
+.sidebar-duex h2 {
+	text-align: center;
+	font-size: 18px;
+	margin: 0px;;
+}
+
+.sidebar-duex ul {
+	font-size: 16px;
+	text-align: left;
+	padding: 0px 0px 0px 30px;;
+}
+
+.sidebar-duex li {
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+
+/* Side bar */
+
+.sidebar {
+	padding: .5em;
+	background-color: hsl(0, 0%, 90%);
+}
+.sidebar-box {
+	/* padding: 1.5em; */
+	background-color: rgb(26, 99, 141); /* For browsers that do not support gradients */
+	border-radius: 5px;
+	background-image: linear-gradient(to bottom right, hsl(0, 0%, 73%),hsl(0, 0%, 70%)); /* Standard syntax (must be last) */
+}
+
+.sidebar .sidebar-box .cards{
+	display: flex;
+	justify-content: center;
+	/* padding: 25px; */
+}
+
+.sidebar h2 {
+	text-align: center;
+	font-size: 18px;
+	margin: 0px;
+}
+
+.sidebar ul {
+	font-size: 16px;
+	text-align: left;
+	padding: 0px 0px 0px 30px;;
+}
+
+.sidebar li {
+	margin-bottom: 1em;
+}
+/*--------------------------------------------------------------
+Cards:
+--------------------------------------------------------------*/
+.main-area {
+	/* padding: 1em; */
+	background-color: hsl(0, 0%, 90%);
+}
+.card a {
+	/* display: flexbox; */
+	/* padding: 0px 40px; */
+	color: hsl(0, 0%, 5%);
+	text-align: center;
+	text-decoration: none;
+	background: white;
+	border: 1px transparent;
+	transition: all .2s;
+	border-radius: 4px;
+}
+
+.card {
+	margin: .5em;
+}
+.main-area h1 {
+	text-align: center;
+}
+
+.cards a {
+	padding: 5px 15px;
+}
+.card a:focus,
+.card a:hover {
+	margin: -4px 4px 4px -4px;
+	box-shadow: 4px 4px 0px 0px hsla(0, 0%, 70%, .8);
+}
+
+
+.cards h2 {
+	font-size: 18px;
+}
