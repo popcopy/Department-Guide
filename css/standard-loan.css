@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-Accessibility
+Accessibility 
 --------------------------------------------------------------*/
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -35,6 +35,7 @@ Typography
 --------------------------------------------------------------*/
 body {
 	margin: 0px;
+	background-color: hsl(0, 0%, 85%);
 }
 
 body,
@@ -89,6 +90,7 @@ Grid:
 Header
 --------------------------------------------------------------*/
 .masthead {
+	background-color: white;
 	margin-bottom: -7px;
 }
 .masthead ul {
@@ -193,7 +195,19 @@ main content
 /*--------------------------------------------------------------
 Side bars:
 --------------------------------------------------------------*/
+#mySidebar {
+	/* width: 130px; */
+	/* position: fixed; */
+	/* z-index: 1; */
+	/* top: 20px; */
+	/* left: 10px; */
+	/* background: #eee; */
+	/* overflow-x: hidden; */
+	/* padding: 8px 0; */
+}
+
 .sidebar-duex {
+	/* position: fixed; */
 	padding: .5em;
 	background-color: hsl(0, 0%, 90%);
 }

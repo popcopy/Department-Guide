@@ -31,68 +31,91 @@ Accessibility
 	z-index: 100000; /* Above WP toolbar */
 }
 
-/*--------------------------------------------------------------
-Typography
---------------------------------------------------------------*/
-
-body {
-	margin: 0;
-}
-
 body,
 button,
 input,
 select,
 textarea {
-    /* font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif; */
+	background-color: hsl(0, 0%, 85%);
+    margin: 0;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size: 18px;
-	line-height: 1.5;
+
 }
 
 /*--------------------------------------------------------------
-Grid:
+Grid
 --------------------------------------------------------------*/
+
 .site {
 	display: grid;
-	grid-template-columns: .5fr 1fr 1fr .5fr;
-	grid-template-rows: auto 1fr 1fr;
+	grid-template-columns: 2fr 1fr 1fr 1fr;
+	/* grid-template-rows: auto 1fr 3fr; */
 }
 
-.main-content {
-	grid-column: 2/4;
-	grid-row: 2/3;
-}
-
-.bar{
+.page-title {
 	grid-column: 1/5;
 	grid-row: 1/2;
 }
 
+.main-content {
+	grid-column: 1/3;
+	grid-row: 2/4;
+}
+
 .sidebar {
-	grid-column: 1/2;
-	grid-row: 2/4;
-}
-
-.sidebar-duex {
-	grid-column: 4/5;
-	grid-row: 2/4;
-}
-
-.main-area {
-	grid-column: 2/4;
+	grid-column: 3/5;
 	grid-row: 3/4;
 }
 
-.footer-content {
+.masthead {
+	grid-column: 3/5;
+	grid-row: 2/3;
+}
+
+.main-area {
 	grid-column: 1/5;
 	grid-row: 4;
 }
 
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+.masthead,
+.page-title,
+.main-content,
+.sidebar,
+.main-area {
+    /* padding: 1em; */
+	background-color: hsl(0, 0%, 85%);
 
+}
+
+.masthead {
+	background-color: hsl(0, 0%, 90%);
+	color: white;
+}
+
+.page-title {
+	background-color: #f8f8f8;
+	color: black;
+}
+
+.main-content {
+    background-color: #70bf40;
+}
+
+.sidebar {
+	background-color: hsl(0, 0%, 90%);
+	/* background-color: #f49018; */
+	color: white;
+}
+
+.main-area {
+    background-color: #0265c0;
+}
 
 /*--------------------------------------------------------------
-Header
+Nav Bar
 --------------------------------------------------------------*/
 nav {
     background-color: white;
@@ -121,7 +144,6 @@ nav {
   /* height: 60px; */
 }
 
-
 /*--------------------------------------------------------------
 main content
 --------------------------------------------------------------*/
@@ -147,25 +169,26 @@ main content
 	font-size: 35px;
 }
 
-
 /*--------------------------------------------------------------
 Side bar:
 --------------------------------------------------------------*/
 .sidebar-duex {
 	padding: .5em;
-	background-color: hsl(0, 0%, 90%);
+	/* background-color: hsl(0, 0%, 90%); */
+	/* margin-bottom: 1em; */
 }
 
 .sidebar-duex h2 {
 	text-align: center;
 	font-size: 18px;
-	margin: 0px;;
+	margin: 0px;
+	text-decoration: underline;
 }
 
 .sidebar-duex ul {
-	font-size: 16px;
+	font-size: 14px;
 	text-align: left;
-	padding: 0px 0px 0px 30px;;
+	padding: 0px 0px 0px 30px;
 }
 
 .sidebar-duex li {
@@ -173,18 +196,17 @@ Side bar:
 	margin-bottom: 1em;
 }
 
-
 /* Side bar */
 
 .sidebar {
 	padding: .5em;
-	background-color: hsl(0, 0%, 90%);
+	/* background-color: hsl(0, 0%, 90%); */
 }
 .sidebar-box {
-	/* padding: 1.5em; */
-	background-color: rgb(26, 99, 141); /* For browsers that do not support gradients */
+	padding: .6em;
 	border-radius: 5px;
-	background-image: linear-gradient(to bottom right, hsl(0, 0%, 73%),hsl(0, 0%, 70%)); /* Standard syntax (must be last) */
+	/* background-color: rgb(153, 158, 160);  */
+	background-image: linear-gradient(to bottom right, rgb(82, 99, 110),  rgb(164, 168, 170));
 }
 
 .sidebar .sidebar-box .cards{
@@ -197,42 +219,50 @@ Side bar:
 	text-align: center;
 	font-size: 18px;
 	margin: 0px;
+	text-decoration: underline;
 }
 
 .sidebar ul {
-	font-size: 16px;
+	font-size: 14px;
 	text-align: left;
-	padding: 0px 0px 0px 30px;;
+	padding: 0px 0px 0px 30px;
 }
 
 .sidebar li {
 	margin-bottom: 1em;
 }
+
+
 /*--------------------------------------------------------------
 Cards:
 --------------------------------------------------------------*/
 .main-area {
-	/* padding: 1em; */
+	/* margin-bottom: 5em; */
+	/* padding-top: -5em; */
 	background-color: hsl(0, 0%, 90%);
 }
-.card a {
-	/* display: flexbox; */
-	/* padding: 0px 40px; */
+
+.main-area h1 {
+	text-align: center;
+}
+
+/* .card a {
 	color: hsl(0, 0%, 5%);
 	text-align: center;
 	text-decoration: none;
-	background: white;
+	background: rgb(121, 47, 47);
 	border: 1px transparent;
 	transition: all .2s;
 	border-radius: 4px;
 }
 
+.cards {
+	text-decoration: none;
+}
 .card {
 	margin: .5em;
 }
-.main-area h1 {
-	text-align: center;
-}
+
 
 .cards a {
 	padding: 5px 15px;
@@ -241,9 +271,53 @@ Cards:
 .card a:hover {
 	margin: -4px 4px 4px -4px;
 	box-shadow: 4px 4px 0px 0px hsla(0, 0%, 70%, .8);
-}
+} */
 
 
 .cards h2 {
 	font-size: 18px;
 }
+
+
+
+.cards {
+	list-style-type: none;
+}
+
+ul.cards {
+	padding: 0px 80px !important;
+	/* margin: 0px; */
+}
+
+.card {
+	margin: 1em;
+}
+
+.card a {
+	display: grid;
+	padding: 0 40px;
+	color: hsl(0, 0%, 5%);
+	text-align: center;
+	text-decoration: none;
+	background: white;
+	/* border: 1px transparent; */
+	transition: all .2s;
+	border-radius: 4px;
+	/* font-family: 'Rajdhani', sans-serif; */
+}
+
+.card a:focus,
+.card a:hover {
+	/* margin: -5px 5px 5px -5px; */
+	box-shadow: 6px 6px 0px 0px hsla(0, 0%, 70%, .8);
+}
+
+
+.cards h2 {
+	/* font-family: 'Open Sans Condensed', sans-serif; */
+	/* font-family: 'Rajdhani', sans-serif; */
+	padding: 0 40px;
+	font-size: 1.2em;
+	margin: 5px;
+}
+

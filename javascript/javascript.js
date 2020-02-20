@@ -1,3 +1,16 @@
+// window.onscroll = function() {myFunction()};
+
+// var header = document.getElementById("mysiderbar");
+// var sticky = header.offsetTop;
+
+// function myFunction() {
+//   if (window.pageYOffset > sticky) {
+//     header.classList.add("sticky");
+//   } else {
+//     header.classList.remove("sticky");
+//   }
+// }
+
 //tabbed panels
 
 // declare globals to hold all the links and all the panel elements
@@ -43,3 +56,4 @@ function displayPanel(tabToActivate) {
         }
 	}
 }
+
