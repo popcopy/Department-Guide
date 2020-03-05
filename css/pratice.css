@@ -132,13 +132,13 @@ Modal
 main content and main section
 --------------------------------------------------------------*/
 .main-content  {
-	padding: .5em 5em;
+	padding: .5em;
 	background-color: hsl(0, 0%, 90%);
 }
-.main-section {
+/* .main-section {
 	padding: .5em 5em;
 	background-color: hsl(0, 0%, 90%);
-}
+} */
 .splash {
 	background-color: rgb(26, 99, 141); /* For browsers that do not support gradients */
 	background-image: linear-gradient(to bottom right, rgb(162, 200, 218), rgb(28, 81, 116)); /* Standard syntax (must be last) */ 
@@ -182,7 +182,7 @@ Side bars:
 
 .sidebar-duex ul,
 .sidebar-box ul {
-	font-size: 16px;
+	font-size: 14px;
 	text-align: left;
 	padding: 0px 0px 0px 20px;
 }
@@ -209,7 +209,7 @@ Side bars:
 }
 
 .sidebar ul {
-	font-size: 16px;
+	font-size: 14px;
 	text-align: left;
 }
 
@@ -222,7 +222,7 @@ Tab Styles
 --------------------------------------------------------------*/
 .main-area {
 	background-color: hsl(0, 0%, 90%);
-    padding: .5em 5em;
+    padding: .5em;
 }
 
 .main-area img {
