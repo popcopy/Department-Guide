@@ -42,11 +42,39 @@ textarea {
 
 }
 /*--------------------------------------------------------------
-Grid
+Grid:
 --------------------------------------------------------------*/
 .site {
 	display: grid;
+	grid-template-columns: .5fr 1fr 1fr .5fr;
+	grid-template-rows: auto 1fr auto;
 }
+
+.bar {
+	grid-column: 1/5;
+	grid-row: 1/2;
+}
+
+.sidebar {
+	grid-column: 1/2;
+	grid-row: 2/4;
+}
+
+.sidebar-duex {
+	grid-column: 4/5;
+	grid-row: 2/4;
+}
+
+.main-area {
+	grid-column: 2/4;
+	grid-row: 3/4;
+}
+
+.main-content {
+	grid-column: 2/4;
+	grid-row: 2/3;
+}
+
 /*--------------------------------------------------------------
 Nav Bar
 --------------------------------------------------------------*/
@@ -139,6 +167,57 @@ main content and main section
 }
 
 /*--------------------------------------------------------------
+Side bars:
+--------------------------------------------------------------*/
+.sidebar-duex {
+	padding: .5em;
+	background-color: hsl(0, 0%, 90%);
+}
+
+.sidebar-duex h2 {
+	text-align: center;
+	font-size: 18px;
+	margin: 0px;;
+}
+
+.sidebar-duex ul,
+.sidebar-box ul {
+	font-size: 16px;
+	text-align: left;
+	padding: 0px 0px 0px 20px;
+}
+
+.sidebar-duex li {
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+.sidebar {
+	padding: .5em;
+	background-color: hsl(0, 0%, 90%);
+}
+.sidebar-box {
+	/* padding: 1.5em; */
+	background-color: rgb(26, 99, 141); /* For browsers that do not support gradients */
+	border-radius: 5px;
+	background-image: linear-gradient(to bottom right, hsl(0, 0%, 73%),hsl(0, 0%, 70%)); /* Standard syntax (must be last) */
+}
+.sidebar h2 {
+	text-align: center;
+	font-size: 18px;
+	margin: 0px;;
+}
+
+.sidebar ul {
+	font-size: 16px;
+	text-align: left;
+}
+
+.sidebar li {
+	/* text-align: left; */
+	margin-bottom: 1em;
+}
+/*--------------------------------------------------------------
 Tab Styles
 --------------------------------------------------------------*/
 .main-area {
@@ -147,10 +226,10 @@ Tab Styles
 }
 
 .main-area img {
-	height: 60em;
+	/* height: 4em; */
 	/* display: block; */
 	/* border: 0; */
-	/* width: 50em; */
+	width: 50em;
 }
 aside.languages {
 	font: .8em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
